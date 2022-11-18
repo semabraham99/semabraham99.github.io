@@ -1,675 +1,120 @@
 *{
-    margin :0;
+    margin: 0;
     padding: 0;
 }
 
-body {
 
+body{
     width: 100vw;
     height: 100vh;
+
     font-family: 'Inter Tight', sans-serif;
-}
-
-.page{
-    display: flex;
-    flex-direction: column;
-}
-
-.popup{
-    display: flex;
-    justify-content: center ;
-    align-items: center;
-}
-
-.header.plain{
-    background-color: #FFC82F;
-    border-radius: 0 0 10px 10px;
-    margin-bottom: 2vh;
-    
-    padding: 4vw;
-    box-sizing: border-box;
- 
-    display : flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.header.bg{
-    background-color: white;
-    background-image: url("/asset/background.png");
-    background-size: cover;
-    border-bottom: gray solid 1px;
-
-    display: flex;
-    align-items: center;
-
-    height: 11.5vh;
-}
-
-.header.search{
-    height: 11.5vh;
-    /* top left botom right */
-    padding: 1vh 3vw 1vh 3vw;
-
-    background-image: url(/asset/background.png);
-    /* background-color: #fffff; */
-    background-color:#ffffff;
-    background-size: cover;
-
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-}
-
-.back-button{
-    height: 4vh;
-}
-
-.header-content{
-    height: 16vh;
-    margin-top: 3vh;
-}
-
-.search-box{
-    flex-grow: 8;
-    height: 6vh;
-    width: 80vw;
-    margin-left: 3.5vw;
-    border-radius: 10mm;
-    padding-left: 3.5vw ;
-    padding-right: 3.5px;
-    
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    background-color:#EAEAEA ;
-}
-
-.search-box input{
-    width: 80vw;
-    background-color: #EAEAEA;
-    
-    font-size: 3.2vh;
-    border: none;
-    outline: none;
-}
-
-.header-content .Class_Ex{
-
-    display : flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.header-content.permohonan{
- 
-    display : flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header a{
-    
-    grid-column: 1;
-    grid-row: 1;   
-    display: flex;
-    align-items: center;
+    background-color: #0C056D;
     
 }
 
-.main-container.plain{
-
-    height: 71.5vh;
-
-    padding-left: 1vw;
-    padding-right: 1vw;
-    box-sizing: border-box;
-}
-
-.main-container.bg{
- 
-    height: 89vh;
-
-    padding-left: 1vw;
-    padding-right: 1vw;
-    box-sizing: border-box;
-}
-
-.judul-permohonan{
-    grid-column: 1;
-    grid-row: 2; 
-    font-size: 2.8vw;   
-}
-
-.status{
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;  
- 
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
-
-.status h1{
-    height: 2hv;
-    background-color: #0D98B9;
-    padding: 0.4vh 3vw;
-
-    font-size: 4vw;
-    color: azure;
-    border-radius: 3vw;
-}
-
-.informasi{
-
-    padding-left: 5vw;
-    padding-right: 1.5vw;
-    margin-bottom: 5vh;
-    font-size: 3vw;
-
-}
-
-.informasi h1{
-    margin-bottom: 2vh;
-}
-
-.informasi p{
-    margin-left: 6vw;
-}
-
-.tahapan {
-
-    padding-left: 5vw;
-    padding-right: 1.5vw;
-
-    display: flex;
-    flex-direction: column;
-
-    font-size: 3vw;
-}
-
-.container{
-    margin-top: 2vh;
-
+.container {
+    height: 100vh;
+    width: 100vw;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.card-satu{
-    background-color: #53C86B;
-    color: rgb(255, 255, 255);
-    height: 8vh;
-    width: 83vw;
-    margin-bottom: 2vh;
-    border-radius: 5vh 2vh 2vh 5vh ;
-
-    display: flex;
-    align-items: center;
-}
-
-.card-dua{
-    background-color: #E8A240;
-    color: rgb(255, 255, 255);
-    height: 8vh;
-    width: 83vw;
-    margin-bottom: 2vh;
-    border-radius: 5vh 2vh 2vh 5vh ;
-
-    display: flex;
-    align-items: center;
-}
-
-.card-tiga{
-    background-color: #E46050;
-    color: rgb(255, 255, 255);
-    height: 8vh;
-    width: 83vw;
-    margin-bottom: 2vh;
-    border-radius: 5vh 2vh 2vh 5vh ;
-
-    display: flex;
-    align-items: center;
-}
-
-.logo{
-    background-color: white;
-    height: 6vh;
-    width: 6vh;
-
-    margin-left: 1vh;
-
-    border-radius: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.keterangan{
-    margin-left: 1.6vh;
-}
-
-.popup-matkul{
-    background-color: #FFC82F;
-    width: 25vw;
-    height: 35vw;
-    padding: 2vw;
-    border-radius: 1vh;
-    border: black solid 2px;
-
-    display: grid;
-    grid-template-rows: 5fr 1fr 1fr 1fr; 
-}
-
-.popup-matkul h1{
-    font-size: 4vw;
-}
-
-.popup-matkul p{
-    font-size: 3vw;
-}
-
-.container-permohonan{
-
-    padding-top: 2vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    height: 88.5vh;
-    background-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    overflow: auto;
-}
-
-.card-permohonan{
     
-    height: 18vh;
+}
+
+.container2{
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.quiz-category{
+
+    height: 63px;
+    width: 16vw;
+    
+    margin-top: 6vh;
     margin-bottom: 1.5vh;
-    background-color: #FFC82F;
-    border-radius: 10px;
+    padding-left: 8px;
 
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 3vw;
-    padding-bottom: 0vw;
-    box-sizing: border-box;
+    font-size: 10px;
 
-    display: grid;
-    grid-template-columns: 8fr 3fr;
-    grid-template-rows: 1fr 2fr 1fr;
-
-}
-
-.card-permohonan h1{
-    /* background-color: aquamarine; */
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end:2 ;
-    font-size: 2.8vh;
-}
-
-.card-permohonan p{
-    /* background-color: aquamarine; */
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end:3 ;
-    font-size: 2.2vh;
-}
-
-.card-permohonan h4{
-    /* background-color: aquamarine; */
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end:4 ;
-    font-size: 2vh;
-}
-
-.card-permohonan .status{
-    
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    color: white;
+    background-color:#5DE9F2;
+    border-radius: 0vh 40px 40px 0vh;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-          
+
+    box-sizing: border-box;
 }
 
-.card-permohonan .status h2{
-    background-color: #36C253;
-    color: #EAEAEA;
-    border-radius: 2.5vh;
+.question{
+    height: 30vh;
+    width: 80vw;
 
+    padding: 5px 40px;
+    margin-top: 5vh;
+
+    font-size: 50px;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
+    background-color:#B61AAE;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.answer{
+    height: 25vh;
+    width: 60vw;
+
+    margin-top: 6vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items:center ;  
+}
+
+.answer h1{
+    width: 46vw;
+    height: 6vh;
+
+    margin: 1.1vh;
+
+    color: white;
+    background-color: #590D82 ;
+    border-radius: 6vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.answer h2{
+    margin: 0.5vh;
+    color: rgb(221, 221, 221);
+}
+
+.pagination{
     height: 5vh;
     width: 20vw;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    font-size: 2.8vh;
-    text-align: center; 
-}
-
-.periode{
-    
-    height: 5vh;
-    background-color: #ffff;
-
-    padding: 1vh 0;
-    display: flex;
-    justify-content: center;
-
-    
-}
-
-.periode-outer{
-   
-    width: 98vw;
-    height: 7vh;
-    border-radius: 1.3vw;
-    
-    box-sizing: border-box;
+    /* margin-top: 4vh; */
+    color: azure;
+    font-size: 30px;
 
     display: flex;
-    justify-content: center;
-}
-
-.dropdown-periode {
-    width: 96vw;
-    height: 5vh;
-    flex-grow: 0.8;
-
-    background-color: rgb(255, 244, 244);
-    border : gray solid 2px;
-    border-radius: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
     
-    font-size: 2vh;
-
-
-}
-
-/*  */
-.container-hasil-studi{
-
-    height: 66.5vh;
-    margin-bottom: 1vh;
-    overflow: auto;
-
-    padding: 1vh 1.5vw;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-
-}
-
-.card-hasil-studi {
-    background-color: #53C86B;
-    height: 12vh;
-
-    padding: 1vh 2vw;
-    margin-bottom: 1.2vh;
-    border-radius: 10px;
-
-    font-size: 3vw;
-    
-    display: grid;
-    grid-template-columns: 7fr 2fr;
-    grid-template-rows: 4fr 1fr;  
-    
-}
-
-.matakuliah{
-    
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-}
-
-.kelas{
-    
-    grid-row-start: 2;
-    grid-column-start: 1;
-
-    display: flex;
-    justify-content: left;
-    align-items: center;
-
-    font-size: 2vh;
-}
-
-.nilai-huruf {
-    
-    grid-row-start: 1;
-    grid-column-start: 2;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 6vh;
-}
-
-.nilai-angka{
-   
-    grid-row-start: 2;
-    grid-column-start: 2;
-    font-size: 2vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*  */
-.indeks-prestasi{
-  
-    height: 12vh;
-    background-color: #53C86B;
-    display: grid;
-    padding-top: 1vh;
-    padding-right: 2vw;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr;
-
-    border-top: gray solid 2px;
-    
-}
-
-.indeks-prestasi h1{
-    font-size: 4vw;
-    text-align: right;
-  
-}
-
-.indeks-prestasi h3{
-    font-size: 8vw;
-    text-align: right;
-}
-
-.Lectures{
-
-    padding-left: 5vw;
-    padding-bottom: 5vw;
-    padding-right: 1.5vw;
-    margin-bottom: 5vh;
-    font-size: 2.5vw;
-    border-bottom: gray solid 2px;
-    
-
-}
-
-.container-lecture{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-basis: spa;
-
-}
-
-.lectture{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25vw;
-    text-align: center;
-    font-size: 2vh;
-   
-}
-
-.lectture img{
-    background-color: #FFC82F;
-    border-radius: 5vh;
-    margin-top: 3vh;
-    width: 15vw;
-    height: 15vw;
-    margin-bottom: 3vh;
-    /* height: 5px; */
-}
-
-
-.short-description {
-
-    padding-left: 5vw;
-    padding-right: 1.5vw;
-
-    display: flex;
-    flex-direction: column;
-
-    font-size: 3vw;
-    overflow: auto;
-}
-
-
-.short-description p{
-    margin-top: 1.6vh;
-}
-
-.container-notifikasi{
-
-    padding-top: 2vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    height: 88.5vh;
-    background-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    overflow: auto;
-}
-
-.card-notifikasi{
-    
-    height: 18vh;
-    margin-bottom: 1.5vh;
-    background-color: #FFC82F;
-    border-radius: 10px;
-
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 3vw;
-    padding-bottom: 0vw;
-    box-sizing: border-box;
-
-    display :flex;
-    flex-direction: column;
-    flex-basis: auto;
-
-}
-
-.card-notifikasi h1{
-    /* background-color: aquamarine; */
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end:2 ;
-    font-size: 3.5vh;
-}
-
-.card-notifikasi p{
-    /* background-color: aquamarine; */
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end:3 ;
-
-    padding-top: 1vh;
-
-    font-size: 2.8vh;
-}
-
-.kosong{
-    background-color: rgb(255, 255, 255);
-    height: 34.5vh;
-}
-
-.nilai{
-    /* background-color: rgb(234, 255, 0); */
-    height: 42vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-
-    border-top: gray solid 2px;
-}
-
-.card-nilai-satu{
-  
-    height: 9vh;
-    padding: 1vh;
-    box-sizing: border-box;
-    margin-bottom: 1vh;
-
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 90% 10%;
-}
-
-.card-nilai-satu .matakuliah{
-    grid-row: 1;
-    grid-column: 1;
-    font-size: 1.3vh;
-}
-
-.jumlah-sks{
-    grid-row: 2;
-    grid-column: 1;
-    font-size: 1.2vh;
-}
-
-.ip{
-    grid-row: 2;
-    grid-column-start: 2;
-    font-size: 1.5vh;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-}
-
-.total-sks{
-    /* background-color: rgb(255, 85, 0); */
-    height: 6vh;
-    padding-left: 1.2vh;
-
-    display: grid;
-    grid-template-columns: 80% 20%;
-    align-content: center;
-    
-}
-
-.ips{
-    /* background-color: rgb(255, 0, 238); */
-    height: 6vh;
-    padding-left: 1.2vh;
-
-
-    display: grid;
-    grid-template-columns: 80% 20%;
-    align-content: center; 
 }
