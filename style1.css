@@ -200,4 +200,8 @@ body{
     .question{
         font-size: 1.44rem;
     }
+
+    .answer button:hover{
+        font-size: 1.44rem;
+    }
 }
