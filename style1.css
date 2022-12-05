@@ -90,7 +90,7 @@ body{
 
     margin-top: 1.1vh;
     margin-bottom: 1.1vh;
-    font-size: 1.25rem;
+    font-size: 2rem;
 
     color: white;
     background-color: #0d827a ;
@@ -102,6 +102,22 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.answer-Section button:hover{
+    
+    font-size: 1.85rem;
+
+    color: white;
+    background-color: #0e9e95 ;
+    /* #590D82 */
+    border-radius: 6vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .answer-Section h2{
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
