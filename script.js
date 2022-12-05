@@ -74,8 +74,8 @@ function resetView() {
     answerA.style.backgroundColor = "#590D82"
     answerB.style.backgroundColor = "#590D82"
 
-    answerA.innerText = answerAText[page]
-    answerB.innerText = answerBText[page]
+    answerA.innerHTML = "<h3>" + answerAText[page] + "<h3>"
+    answerB.innerHTML = "<h3>" + answerBText[page] + "<h3>"
     question.innerText = questionText[page]
     
 }

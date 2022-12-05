@@ -31,6 +31,16 @@ body{
     justify-content: left;
 }
 
+.containerPage2 {
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 .quiz-category{
 
     height: 6vh;
