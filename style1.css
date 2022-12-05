@@ -185,3 +185,17 @@ body{
         width: 10vw;
     }
 }
+
+@media only screen and (max-width: 600px){
+    .answer button{     
+        font-size: 1.2rem;
+    }
+
+    .quiz-category{
+        font-size: 0.45rem;
+    }
+
+    .question{
+        font-size: 1.4rem;
+    }
+}
