@@ -1,13 +1,33 @@
-let page = 0
-
+var page = 0
 
 const key = [1,2,1,1]
+const questionText = [
+    "which word means something cause motion",
+    "which word means something makes change of speed",
+    "which word means change of speed",
+    "which word means ability to do work ",
+]
+const answerAText = [
+    "Force",
+    "Work",
+    "Acceleration",
+    "Energy",
+    
+]
+const answerBText = [
+    "Acceleration",
+    "Force",
+    "Work",
+    "Speed",   
+]
+
 const answerA = document.getElementById('buttonA')
 const answerB = document.getElementById('buttonB')
+const question = document.getElementById('questionText')
 
 function cekJawaban (id) {
     console.log("di click")
-    if (page >= 5){
+    if (page >= 3){
         page = 0
     }
 
@@ -24,19 +44,23 @@ function cekJawaban (id) {
 
 function jawabanBenar(){
     if (key[page]===1){
-        answerA.style.backgroundColor = "blue"
+        answerA.style.backgroundColor = "#0e9e95"
+       
     }
     else{
-        answerB.style.backgroundColor = "blue"
+        answerB.style.backgroundColor = "#0e9e95"
+      
     }
 }
 
 function jawabanSalah(){
     if (key[page]===1){
         answerB.style.backgroundColor = "red"
+      
     }
     else{
         answerA.style.backgroundColor = "red"
+    
     }
 }
 
@@ -47,8 +71,17 @@ function nextPage() {
 }
 
 function resetView() {
-    answerA.style.backgroundColor = "#0e9e95"
-    answerB.style.backgroundColor = "#0e9e95"
+    answerA.style.backgroundColor = "#590D82"
+    answerB.style.backgroundColor = "#590D82"
+
+    answerA.innerText = answerAText[page]
+    answerB.innerText = answerBText[page]
+    question.innerText = questionText[page]
+    
+}
+
+function test(){
+    console.log(10)
 }
 
 // // ubah text dan warna answer A

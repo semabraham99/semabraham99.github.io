@@ -16,22 +16,22 @@
 </head>
 <body>
     
-    <div class="container">
+    <div class="container" >
         <div class="container2">
             <div class="quiz-category">
                 <h1>Motion - L1 </h1>
             </div>
         </div>
         <div class="question">
-            <h3>which word means something cause motion ?</h3>  
+            <h3 id="questionText">which word means something cause motion ?</h3>  
         </div>
-        <div class="answer-Section">
+        <div class="answer" >
             <button id= "buttonA" type="button" onclick="cekJawaban(1)"> force </button>
             <h2>or</h2>
             <button id= "buttonB" type="button" onclick="cekJawaban(2)"> apa </button>
         
         </div>
-        <div class="pagination">
+        <div class="pagination" onload="test()">
             <h1>.</h1> 
             <h1>.</h1> 
             <h1>.</h1> 
@@ -39,7 +39,9 @@
             <h1>.</h1> 
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">
+        test()
+    </script>
   
 </body>
 </html>
