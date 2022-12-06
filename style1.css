@@ -150,6 +150,9 @@ body{
 }
 
 @media only screen and (min-width: 768px) {
+    .question{
+        font-size: 1.8rem;
+    }
     .answer{
         height: 25vh;
         width: 80vw;
