@@ -13,7 +13,7 @@ body{
     
 }
 
-.container {
+#containerPage1 {
     height: 100vh;
     width: 100vw;
     
@@ -31,7 +31,7 @@ body{
     justify-content: left;
 }
 
-.containerPage2 {
+#containerPage2 {
     height: 100vh;
     width: 100vw;
     
@@ -149,6 +149,41 @@ body{
     
 }
 
+#score{
+    margin-top: 10vh;
+    height: 20vh;
+    width: 80vw;
+
+    color: azure;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: #271f8f;
+}
+
+.rocket{
+    height: 60vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:end;
+    background-color: #0C056D;
+}
+.rocket img{
+    transition: 1s ease-in-out;
+}
+.rocket:hover img{
+    transform: translateY(-70%);
+}
+
+/* desktop view */
 @media only screen and (min-width: 768px) {
     .question{
         font-size: 1.8rem;
@@ -189,6 +224,7 @@ body{
     }
 }
 
+/* phone view portrait */
 @media only screen and (max-width: 600px){
     .answer button{     
         height: 7.5vh;
