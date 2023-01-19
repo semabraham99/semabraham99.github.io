@@ -91,13 +91,17 @@ function sapiIndukan2() {
 }
 
 function gantiInputTanggal (tipe){
-    console.log(tipe)
+    
     switch (tipe){
         case "sapih" :
+            console.log(tipe)
             document.getElementById("inputDara1").innerHTML = innerInputDaraB
+            break
         
         case "kelahiran" :
-        document.getElementById("inputDara1").innerHTML = innerInputDaraA
+            console.log(tipe)
+            document.getElementById("inputDara1").innerHTML = innerInputDaraA
+            break
     }
 }
 
@@ -106,7 +110,8 @@ function hitung(tipe){
         case 1:
             console.log("hitungan 1")
             let tanggalLahir = new Date (inputTanggalLahir.value).getTime()
-            
+            console.log("nilai input 1", tanggalLahir)
+
             let birahi1a = new Date (tanggalLahir + 654 * hari2milis)
             let birahi1b = new Date (tanggalLahir + 660 * hari2milis) 
 
@@ -125,19 +130,21 @@ function hitung(tipe){
         case 2:
             console.log("hitungan 2")
             let tanggalSapih = new Date (inputTanggalSapih.value).getTime()
-            
-            let birahi1a = new Date (tanggalSapih + 90 * hari2milis)
-            let birahi1b = new Date (tanggalSapih + 96 * hari2milis) 
+            console.log("nilai input 2", tanggalSapih)
 
-            let birahi2a = new Date (tanggalSapih + 111 * hari2milis)
-            let birahi2b = new Date (tanggalSapih + 117 * hari2milis)
+            let birahi1c = new Date (tanggalSapih + 90 * hari2milis)
+            let birahi1d = new Date (tanggalSapih + 96 * hari2milis) 
 
-            let birahi3a = new Date (tanggalSapih + 132 * hari2milis)
-            let birahi3b = new Date (tanggalSapih + 138 * hari2milis)
+            let birahi2c = new Date (tanggalSapih + 111 * hari2milis)
+            let birahi2d = new Date (tanggalSapih + 117 * hari2milis)
 
-            updateTanggal(idBirahi1,birahi1a,birahi1b)
-            updateTanggal(idBirahi2,birahi2a,birahi2b)
-            updateTanggal(idBirahi3,birahi3a,birahi3b)
+            let birahi3c = new Date (tanggalSapih + 132 * hari2milis)
+            let birahi3d = new Date (tanggalSapih + 138 * hari2milis)
+
+            updateTanggal(idBirahi1,birahi1c,birahi1d)
+            updateTanggal(idBirahi2,birahi2c,birahi2d)
+            updateTanggal(idBirahi3,birahi3c,birahi3d)
+            break
 
         case 3:
             console.log("hitungan 3")
@@ -156,6 +163,7 @@ function hitung(tipe){
 
         case 4:
             console.log("hitungan 4")
+            break
     }
 
 }
