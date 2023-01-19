@@ -58,14 +58,14 @@ function hitung(tipe){
             console.log("hitungan 1")
             let tanggalLahir = new Date (inputTanggalLahir.value).getTime()
             
-            let birahi1a = new Date (654 * hari2milis)
-            let birahi1b = new Date (660 * hari2milis) 
+            let birahi1a = new Date (tanggalLahir + 654 * hari2milis)
+            let birahi1b = new Date (tanggalLahir + 660 * hari2milis) 
 
-            let birahi2a = new Date (675 * hari2milis)
-            let birahi2b = new Date (681 * hari2milis)
+            let birahi2a = new Date (tanggalLahir + 675 * hari2milis)
+            let birahi2b = new Date (tanggalLahir + 681 * hari2milis)
 
-            let birahi3a = new Date (696 * hari2milis)
-            let birahi3b = new Date (702 * hari2milis)
+            let birahi3a = new Date (tanggalLahir + 696 * hari2milis)
+            let birahi3b = new Date (tanggalLahir + 702 * hari2milis)
 
             updateTanggal(idBirahi1,birahi1a,birahi1b)
             updateTanggal(idBirahi2,birahi2a,birahi2b)
@@ -85,7 +85,7 @@ function hitung(tipe){
             let birahiA = new Date (tanggalBeranak + 78 * hari2milis)
             let birahiB = new Date (tanggalBeranak + 84 * hari2milis) 
 
-            updateTanggal(idMasaKosong,kosongA,kosongA)
+            updateTanggal(idMasaKosong,kosongA,kosongB)
             updateTanggal(idEstBirahi1,birahiA,birahiB)
             
             break
