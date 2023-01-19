@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding :0
+}
+
+body {
+    font-family: 'Inter Tight', sans-serif;
+}
+
+#mainPage{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    background-color: blueviolet;
+}
+
+#sapiDara{
+    height:100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    background-color: aqua;
+}
+
+#sapiIndukan1{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:chartreuse;
+}
+
+#sapiIndukan2{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:rgb(255, 187, 0);
+}
+
+.container{
+    height: 90vh;
+    width: 80vw;
+
+    padding-top: 4vh;
+    padding-bottom: 3vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+    background-color: brown;
+    box-sizing: border-box;
+}
+
+.logo{
+    height: 40vh;
+    width: 80vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+
+    margin-top: 8vh;
+    padding-top: 1vh;
+    box-sizing: border-box;
+    
+    background-color: chocolate;
+}
+
+.opsi1{
+    height: 14vh;
+    width: 80vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+
+    margin-top: 4vh;
+    padding-top: 1vh;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    
+    background-color: chocolate;
+
+}
+
+.judul{
+    height: 16vh;
+    width: 80vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 5vh;
+    padding-top: 1vh;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    
+    background-color: chocolate;
+}
+
+.inputTanggal{
+    height: 21vh;
+    width: 80vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+
+    margin-top: 4vh;
+    padding-top: 2vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    
+    background-color: chocolate;
+}
+
+.inputTanggal input{
+    height: 24px;
+    width: 32vw; 
+    margin-left: 4vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.inputDialog2{
+    
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    margin-bottom: 2vh;
+}
+
+.inputDialog2 button{
+    height: 28px;
+    width: 90px;
+
+    border-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    
+    background-color: rgb(117, 210, 30);
+}
+
+.output1{
+    height: 36vh;
+    width: 80vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+
+    margin-top: 4vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    
+    background-color: chocolate;
+}
+
+.contentOutput{
+    width: 72vw;
+    height: 8vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    margin-bottom: 2vh;
+}
+
+.detilInfo{
+    
+    width: 80vw;
+    height: 40vh;
+
+    border-radius: 8px;
+    margin-top: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    
+    background-color: crimson;
+}
+
+.kembali{
+    width: 80vw;
+    height: 7vh;
+
+    border-radius: 18px;
+
+    margin-top: 4vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: crimson;
+}
+
+.tanggalProgresBar{
+    
+    width: 80vw;
+    height:10vh;
+
+    margin-top: 3vh;    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    background-color:darkcyan;
+}
+
+.alas {
+    width: 50vw;
+    height:8vh;   
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    border-radius: 25px;
+    background-color:rgb(126, 126, 126);
+
+}
+
+.progress {
+    width: 28vw;
+    height:8vh;   
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    border-radius: 25px;
+    background-color:rgb(68, 67, 67);
+
+}
+
+.info{
+    width: 72vw;
+    height:10vh;   
+
+    margin-top: 2vh;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    border-radius: 10px;
+    background-color: saddlebrown ; 
+}
+
+.aplikasi{
+    width: 72vw;
+    height:10vh;   
+
+    margin-top: 2vh;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    border-radius: 10px;
+    background-color:tomato ; 
+}

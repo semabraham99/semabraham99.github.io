@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>aplikasi ternak</h1>
+    <h3>1. masukan tanggal beranak terakhir</h3>
+    <input type="date" id="tanggal1">
+    <button type="button" onclick="submit()"> hitung</button>
+
+    <h3>2. estimasi massa birahi 1 (h + 60)</h3>
+    <p id="infoBirahi1"></p>
+
+    <h3>3. estimasi massa birahi 2 (h + 90) </h3>
+    <p id="infoBirahi2"></p>
+
+    <h3>4. masukan tanggal Birahi Terdeteksi </h3>
+    <input type="date" id="tanggal2">
+    <button type="button" onclick="submit2()"> hitung</button>
+
+    <h3>5. Rekomendasi massa Kawin</h3>
+    <p id="infoMasaKawin"></p>
+
+    <h3>6. masukan tanggal Kawin yang dilakukan </h3>
+    <input type="date" id="tanggal3">
+    <button type="button" onclick="submit3()"> hitung</button>
+
+    <div id="dynamic">
+        <h3> Cek Kebuntingan 1 ( h + 30 ) </h3>
+        <p>( apakah ada tanda birahi ? )</p>
+        <!-- masuka radio box  -->
+        <button type="button" onclick="gantiHalaman(2)"> ya</button>
+        <button type="button" onclick="gantiHalaman(3)">tidak</button>
+        
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

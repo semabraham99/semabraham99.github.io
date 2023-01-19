@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding
+}
+
+body {
+    font-family: 'Inter Tight', sans-serif;
+}
+
+#login{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: blueviolet;
+}
+
+#mainpage{
+    height:100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: aqua;
+}
+
+#detailpage{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color:chartreuse;
+}
+
+.container{
+    height: 90vh;
+    width: 80vw;
+
+    padding-top: 4vh;
+    padding-bottom: 3vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+    background-color: brown;
+    box-sizing: border-box;
+}
+
+.logo{
+    height: 30vh;
+    width: 60vw;
+
+    margin-top: 5vh;
+    
+    background-color: chocolate;
+}
+
+.inputNomorHp{
+    height: 8vh;
+    width: 60vw;
+
+    margin-top: 4vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    
+    background-color: chocolate;
+}
+
+.inputNomorHp input{
+    height: 5vh;
+    width: 54vw;
+    background-color: chocolate;
+    border-style: none;
+}
+
+.tombolLogin{
+    height: 8vh;
+    width: 60vw;
+
+    border-style: none;
+
+    margin-top: 4vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    
+    background-color: chocolate;
+}
+
+.cardSapi{
+    height: 34vh;
+    width: 68vw;
+
+    margin-bottom: 3vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    
+    background-color: crimson;
+}
+
+.top{
+    height: 9vh;
+    width: 68vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color:darkgoldenrod;
+}
+
+.gambar{
+    height: 25vh;
+    width: 68vw;
+    background-color: darkgreen;
+}
+
+.namaSapi{
+    height: 60%;
+    width: 36%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color:rgb(214, 28, 28);
+}
+
+.status{
+    height: 70%;
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.status h4{
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    width: 22vw;
+
+    text-align: center;
+    justify-items: center;
+
+    background-color: yellowgreen;
+    border-radius: 15px;
+    
+    color: wheat;
+  
+}
+
+.infoFase{
+    height: 26vh;
+    width: 80vw;
+
+    border-radius: 8px;
+
+    margin-top: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color:darkmagenta;
+}
+
+.fase{
+    height: 5vh;
+    width: 80vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: darkorange;
+}
+
+.detilInfo{
+    
+    width: 80vw;
+    height: 40vh;
+
+    border-radius: 8px;
+    margin-top: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    
+    background-color: crimson;
+}
+
+.kembali{
+    
+    width: 80vw;
+    height: 7vh;
+
+    border-radius: 18px;
+
+    margin-top: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: crimson;
+}
+
+.tanggalProgresBar{
+    
+    width: 80vw;
+    height:10vh;
+
+    margin-top: 3vh;    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    background-color:darkcyan;
+}
+
+.alas {
+    width: 50vw;
+    height:8vh;   
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    border-radius: 25px;
+    background-color:rgb(126, 126, 126);
+
+}
+
+.progress {
+    width: 28vw;
+    height:8vh;   
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    border-radius: 25px;
+    background-color:rgb(68, 67, 67);
+
+}
+
+.info{
+    width: 72vw;
+    height:10vh;   
+
+    margin-top: 2vh;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    border-radius: 10px;
+    background-color: saddlebrown ; 
+}
+
+.aplikasi{
+    width: 72vw;
+    height:10vh;   
+
+    margin-top: 2vh;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+    border-radius: 10px;
+    background-color:tomato ; 
+}

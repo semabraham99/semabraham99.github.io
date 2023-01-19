@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aplikasi Ternak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body> 
+    <div id="mainPage">
+        <div class="logo">
+            <h2>Kalender reproduksi sapi</h2>
+        </div>
+
+        <div class="opsi1" onclick="sapiDara()">
+            <h2>Sapi Dara</h2>
+            <p>umur 2 th, belum pernah beranak</p>
+        </div>
+
+        <div class="opsi1" onclick="sapiIndukan1()">
+            <h2>Sapi Indukan</h2>
+            <p>sudah pernah beranak</p>
+        </div>
+
+
+    </div>
+
+    <div id="sapiDara">
+        <div class="judul">
+            <h1>Sapi Dara</h1>
+        </div>
+
+        <div class="inputTanggal">
+            <h3>Masukan Tanggal Lahir</h3>
+            <input type="date" id="tanggalLahir">  
+            <div class="inputDialog2">
+                <button onclick="gantiInputTanggal('sapih')">lupa</button>
+                <button onclick="hitung(1)">ok</button>
+            </div>
+        </div>
+
+        <div class="output1">
+            <div class="contentOutput">
+                <h3>Prediksi birahi pertama</h3>
+                <p id="outputTanggalBirahi1">4 jan - 5 des</p>
+            </div>
+           <div class="contentOutput">
+                <h3>Prediksi birahi kedua</h3>
+                <p id="outputTanggalBirahi2">4 jan - 5 des</p>
+           </div>
+           <div class="contentOutput">
+                <h3>Prediksi birahi ketiga</h3>
+                <p id="outputTanggalBirahi3">4 jan - 5 des</p> 
+            </div>
+        </div>
+
+        <div class="kembali" onclick="mainPage()">
+            <h3>kembali</h3>
+        </div>
+    </div>
+
+    <div id="sapiIndukan1">
+        <div class="judul">
+            <h1>Sapi Indukan</h1>
+        </div>
+
+        <div class="inputTanggal">
+            <h3>Tanggal Beranak Terakhir</h3>
+            <input type="date" id="tanggalBeranak">  
+            <div class="inputDialog2">
+                <button onclick="hitung(2)">lupa</button>
+                <button onclick="hitung(3)">ok</button>
+            </div>
+        </div>
+
+        <div class="output1">
+            <div class="contentOutput">
+                <h3>Masa Kosong</h3>
+                <p id="outputTanggalKosong">4 jan - 5 des</p>
+            </div>
+
+            <div class="contentOutput">
+                <h3>perkiraan birahi 1</h3>
+                <p id="outputTanggalEstBirahi1">4 jan - 5 des</p>
+            </div>
+        </div>
+
+        <div class="kembali" onclick="mainPage()">
+            <h3>kembali</h3>
+        </div>
+    </div>
+
+    <div id="sapiIndukan2">
+        <div class="judul">
+            <h1>Sapi Indukan</h1>
+        </div>
+
+        <div class="inputTanggal">
+            <h3>Masukan Tanggal Birahi terakhir</h3>
+            <input type="date">  
+            <div class="inputDialog2">
+                <button>lupa</button>
+                <button>ok</button>
+            </div>
+        </div>
+
+        <div class="output1">
+            <h3>Prediksi Birahi selanjutnya</h3>
+            <p>4 jan - 5 des</p>
+            <h3>Prediksi tanggal kawin</h3>
+            <p>4 jan - 5 des</p>
+            <h3>Prediksi cek kebuntingan</h3>
+            <p>4 jan - 5 des</p>
+
+        </div>
+
+        <div class="kembali" onclick="mainPage()">
+            <h3>kembali</h3>
+        </div>
+    </div>
+    
+</body>
+<script src= "script.js"></script>
+</html>
