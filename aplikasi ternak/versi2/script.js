@@ -4,6 +4,7 @@ const halaman3 = document.getElementById('sapiIndukan1')
 const halaman4 = document.getElementById('sapiIndukan2')
 
 const inputTanggalLahir = document.getElementById('tanggalLahir')
+const inputTanggalSapih = document.getElementById('tanggalSapih')
 const idBirahi1 = 'outputTanggalBirahi1'
 const idBirahi2 = 'outputTanggalBirahi2'
 const idBirahi3 = 'outputTanggalBirahi3'
@@ -11,7 +12,48 @@ const idBirahi3 = 'outputTanggalBirahi3'
 const inputTanggalBeranak = document.getElementById('tanggalBeranak')
 const idMasaKosong = "outputTanggalKosong"
 const idEstBirahi1 = "outputTanggalEstBirahi1"
- 
+
+const innerInputIndukan1a = `
+    <h3>Apakah sapi menunjukan tanda-tanda birahi</h3>  
+    <div class="inputDialog2">
+        <button onclick="hitung(2)">ya</button>
+        <button onclick="hitung(3)">tidak</button>
+    </div>
+`
+
+const innerInputIndukan1b = `
+    <h3>Tanggal Beranak Terakhir</h3>
+    <input type="date" id="tanggalBeranak">  
+    <div class="inputDialog2">
+        <button onclick="hitung(3)">ok</button>
+    </div>
+`
+
+const innerInputIndukan1c = `
+    <h3>Tanggal Birahi Terdekat</h3>
+    <input type="date" id="tanggalBirahiTerdekat">  
+    <div class="inputDialog2">
+        <button onclick="hitung(3)">ok</button>
+    </div>
+`
+
+const innerInputDaraA=`
+    <h3>Masukan Tanggal Lahir</h3>
+    <input type="date" id="tanggalLahir">  
+    <div class="inputDialog2">
+        <button onclick="gantiInputTanggal('sapih')">lupa</button>
+        <button onclick="hitung(1)">ok</button>
+    </div>
+`
+
+const innerInputDaraB=`
+    <h3>Masukan Tanggal sapih</h3>
+    <input type="date" id="tanggalSapih">  
+    <div class="inputDialog2">
+        <button onclick="gantiInputTanggal('kelahiran')">kembali</button>
+        <button onclick="hitung(2)">ok</button>
+    </div>
+`
 
 const hari2milis = 86400000
 
@@ -50,6 +92,13 @@ function sapiIndukan2() {
 
 function gantiInputTanggal (tipe){
     console.log(tipe)
+    switch (tipe){
+        case "sapih" :
+            document.getElementById("inputDara1").innerHTML = innerInputDaraB
+        
+        case "kelahiran" :
+        document.getElementById("inputDara1").innerHTML = innerInputDaraA
+    }
 }
 
 function hitung(tipe){
@@ -72,8 +121,23 @@ function hitung(tipe){
             updateTanggal(idBirahi3,birahi3a,birahi3b)
             
             break
+
         case 2:
             console.log("hitungan 2")
+            let tanggalSapih = new Date (inputTanggalSapih.value).getTime()
+            
+            let birahi1a = new Date (tanggalSapih + 90 * hari2milis)
+            let birahi1b = new Date (tanggalSapih + 96 * hari2milis) 
+
+            let birahi2a = new Date (tanggalSapih + 111 * hari2milis)
+            let birahi2b = new Date (tanggalSapih + 117 * hari2milis)
+
+            let birahi3a = new Date (tanggalSapih + 132 * hari2milis)
+            let birahi3b = new Date (tanggalSapih + 138 * hari2milis)
+
+            updateTanggal(idBirahi1,birahi1a,birahi1b)
+            updateTanggal(idBirahi2,birahi2a,birahi2b)
+            updateTanggal(idBirahi3,birahi3a,birahi3b)
 
         case 3:
             console.log("hitungan 3")
@@ -115,54 +179,3 @@ function date2teks (date){
     let teks = String(tanggal) + " " +arrayBulan[bulan]
     return teks
 }
-// function getMainPageHTML(dataSapi){
-//     let jumlahSapi = dataSapi.length
-
-//     // cetak 1 kartu 
-//     let arrayCard = [] 
-//     let innerHTML = ''
-
-//     for (let i = 0; i<jumlahSapi; i++){
-        
-//         let nama = dataSapi[i]['nama']
-//         let status = dataSapi[i]['fase']
-//         let foto = dataSapi[i]['foto']
-
-//         // html 1 card 
-//         let htmlCard = createCard(nama, status, foto, i)
-//         arrayCard.push (htmlCard) 
-//     }
-
-//     // tambbah html beberapa card 
-//     for (let i = 0; i<jumlahSapi; i++){
-//         innerHTML += arrayCard[i]
-//     }
-
-//     return innerHTML
-// }
-
-// function createCard(namaSapi,status,foto,urutan){
-   
-//     let html1 = `
-//     <div class="cardSapi" onclick="test(`+String(urutan)+`)">
-//         <div class="top">`
-
-//     let html2 = `
-//     <div class="namaSapi">
-//         <h3>`+String(namaSapi)+`</h3>
-//     </div>`
-
-//     let html3 = `
-//     <div class="status">
-//         <h4>`+String(status)+`</h4>
-//     </div>`
-
-//     let html4 = `
-//     </div>
-//         <div class="gambar">
-//             <img src="`+String(foto)+`" width="100%" height="130px">
-//         </div>
-//     </div>`
-
-//     return html1 + html2 + html3 + html4 
-// }
