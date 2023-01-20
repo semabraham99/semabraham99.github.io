@@ -230,9 +230,9 @@ function hitung(tipe){
             let birahiSelanjutnyaB = new Date (tanggalBirahiTerdekat + 24* hari2milis)
             let beranak = new Date (tanggalBirahiTerdekat + 275 * hari2milis)
 
-            updateTanggal(idKawin,tanggalKawin)
+            updateTanggal1(idKawin,tanggalKawin)
             updateTanggal(idBirahiSelanjutnya,birahiSelanjutnyaA,birahiSelanjutnyaB)
-            updateTanggal(idBeranak,beranak)
+            updateTanggal1(idBeranak,beranak)
             // dapatkan id untuk tanggal
 
 
@@ -251,7 +251,7 @@ function updateTanggal (id,tanggal1,tanggal2){
     document.getElementById(id).innerText = teks
 }
 
-function updateTanggal (id,tanggal){
+function updateTanggal1 (id,tanggal){
     
     let teks = date2teks(tanggal)
     
