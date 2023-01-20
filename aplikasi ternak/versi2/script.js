@@ -59,6 +59,18 @@ const innerInputDaraB=`
     </div>
 `
 
+const innerOutputIndukan1b=`
+
+    <div class="contentOutput">
+        <h3>Massa kosong</h3>
+        <p id="outputMasaKosong"> </p>
+    </div>
+
+    <div class="contentOutput">
+        <h3>Birahi Selanjutnya</h3>
+        <p id="outputTanggalEstBirahi1"> </p>
+    </div>
+`
 
 const innerOutputIndukan1c=`
 
@@ -70,11 +82,6 @@ const innerOutputIndukan1c=`
     <div class="contentOutput">
         <h3>cek birahi Selanjutnya </h3>
         <p id="outputTanggalBirahiSelanjutnya"> </p>
-    </div>
-
-    <div class="contentOutput">
-        <h3>Waktu Beranak / melahirkan</h3>
-        <p id="outputTanggalBeranak"> </p>
     </div>
 `
 
