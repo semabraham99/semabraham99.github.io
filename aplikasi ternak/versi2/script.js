@@ -220,7 +220,7 @@ function hitung(tipe){
 
             //  tambah pagi hari
             updateTanggal1(idKawin,tanggalKawin1,"Pagi hari")
-            updateTanggal(idBirahiSelanjutnya1,birahiSelanjutnyaA1,birahiSelanjutnyaB1)
+            updateTanggal(idBirahiSelanjutnya,birahiSelanjutnyaA1,birahiSelanjutnyaB1)
             updateTanggal1(idBeranak,beranak1)
             break
     }
