@@ -36,7 +36,8 @@ const innerInputIndukan1c = `
     <h3>Tanggal Birahi Terdekat</h3>
     <input type="date" id="tanggalBirahiTerdekat">  
     <div class="inputDialog2">
-        <button onclick="hitung(5)">ok</button>
+        <button onclick="hitung(4)">pagi</button>
+        <button onclick="hitung(5)">sore</button>
     </div>
 `
 
@@ -58,21 +59,6 @@ const innerInputDaraB=`
     </div>
 `
 
-const innerOutputIndukan1b=`
-    <div class="contentOutput">
-        <h3>Masa Kosong</h3>
-        <p id="outputMasaKosong" > </p>
-    </div>
-
-    <div class="contentOutput">
-        <h3>perkiraan birahi 1</h3>
-        <p id="outputTanggalEstBirahi1"> </p>
-    </div>
-
-    <div class="contentOutput">
-        <h3>Amati Sapi dan catat tanggal birahi selanjutnya</h3>
-    </div>
-`
 
 const innerOutputIndukan1c=`
 
@@ -203,30 +189,39 @@ function hitung(tipe){
             updateTanggal(idEstBirahi1,birahiA,birahiB)
             updateTanggal(idMasaKosong,kosongA,kosongB)
             
-            
             break
 
         case 4:
             console.log("hitungan 4")
-            break
-
-        case 5:
-            // menghitung tanggal kawin, cek birahi selanjutnya, beranak dari 
-            console.log("hitungan 4")
             let elementtanggalBirahi = document.getElementById('tanggalBirahiTerdekat')
             let tanggalBirahiTerdekat = new Date(elementtanggalBirahi.value).getTime()
             
-            let tanggalKawin = new Date (tanggalBirahiTerdekat + 1*hari2milis)
+            let tanggalKawin = new Date (tanggalBirahiTerdekat)
             let birahiSelanjutnyaA = new Date (tanggalBirahiTerdekat + 18* hari2milis)
             let birahiSelanjutnyaB = new Date (tanggalBirahiTerdekat + 24* hari2milis)
             let beranak = new Date (tanggalBirahiTerdekat + 275 * hari2milis)
 
-            updateTanggal1(idKawin,tanggalKawin)
+            //  tambah sore hari
+            updateTanggal1(idKawin,tanggalKawin,"sore hari") 
             updateTanggal(idBirahiSelanjutnya,birahiSelanjutnyaA,birahiSelanjutnyaB)
             updateTanggal1(idBeranak,beranak)
-            // dapatkan id untuk tanggal
+            break
 
+        case 5:
+            // menghitung tanggal kawin, cek birahi selanjutnya, beranak dari 
+            console.log("hitungan 5")
+            let elementtanggalBirahi1 = document.getElementById('tanggalBirahiTerdekat')
+            let tanggalBirahiTerdekat1 = new Date(elementtanggalBirahi1.value).getTime()
+            
+            let tanggalKawin1 = new Date (tanggalBirahiTerdekat1 + 1*hari2milis)
+            let birahiSelanjutnyaA1 = new Date (tanggalBirahiTerdekat1 + 18* hari2milis)
+            let birahiSelanjutnyaB1 = new Date (tanggalBirahiTerdekat1 + 24* hari2milis)
+            let beranak1 = new Date (tanggalBirahiTerdekat1 + 275 * hari2milis)
 
+            //  tambah pagi hari
+            updateTanggal1(idKawin,tanggalKawin1,"Pagi hari")
+            updateTanggal(idBirahiSelanjutnya1,birahiSelanjutnyaA1,birahiSelanjutnyaB1)
+            updateTanggal1(idBeranak,beranak1)
             break
     }
 
@@ -242,11 +237,11 @@ function updateTanggal (id,tanggal1,tanggal2){
     document.getElementById(id).innerText = teks
 }
 
-function updateTanggal1 (id,tanggal){
+function updateTanggal1 (id,tanggal,tambahan){
     
     let teks = date2teks(tanggal)
     
-    document.getElementById(id).innerText = teks
+    document.getElementById(id).innerText = teks + " - " + String(tambahan)
 }
 
 function date2teks (date){
