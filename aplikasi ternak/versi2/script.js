@@ -45,7 +45,6 @@ const innerInputDaraA=`
     <h3>Masukan Tanggal Lahir</h3>
     <input type="date" id="tanggalLahir">  
     <div class="inputDialog2">
-        <button onclick="gantiInputTanggal('sapih')">lupa</button>
         <button onclick="hitung(1)">ok</button>
     </div>
 `
