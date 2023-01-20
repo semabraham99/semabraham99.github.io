@@ -1,7 +1,6 @@
 const halaman1 = document.getElementById('mainPage')
 const halaman2 = document.getElementById('sapiDara')
 const halaman3 = document.getElementById('sapiIndukan1')
-const halaman4 = document.getElementById('sapiIndukan2')
 
 let inputTanggalLahir = document.getElementById('tanggalLahir')
 let inputTanggalSapih = document.getElementById('tanggalSapih')
@@ -20,8 +19,8 @@ const idEstBirahi1 = "outputTanggalEstBirahi1"
 const innerInputIndukan1a = `
     <h3>Apakah sapi menunjukan tanda-tanda birahi</h3>  
     <div class="inputDialog2">
-        <button onclick="hitung(2)">ya</button>
-        <button onclick="hitung(3)">tidak</button>
+        <button onclick='gantiInputTanggal("birahi")'>ya</button>
+        <button onclick='gantiInputTanggal("beranak")'>tidak</button>
     </div>
 `
 
@@ -100,32 +99,24 @@ function test (urutan){
     document.getElementById(idBirahi1).innerText ="halo"
 }
 
-function mainPage() {    
+function mainPage(page=0) {    
     halaman1.style.display = "flex"
     halaman2.style.display = "none"
     halaman3.style.display = "none"
-    halaman4.style.display = "none"
+    resetHalaman(page)
 }
 
 function sapiDara() {
+    console.log("test")
     halaman2.style.display = "flex"
     halaman1.style.display = "none"
     halaman3.style.display = "none"
-    halaman4.style.display = "none"
 }
 
 function sapiIndukan1() {
     halaman3.style.display = "flex"
     halaman2.style.display = "none"
     halaman1.style.display = "none"
-    halaman4.style.display = "none"
-}
-
-function sapiIndukan2() {
-    halaman4.style.display = "flex"
-    halaman2.style.display = "none"
-    halaman1.style.display = "none"
-    halaman3.style.display = "none"
 }
 
 function gantiInputTanggal (tipe){
@@ -267,4 +258,18 @@ function date2teks (date){
     let tahun = a.getFullYear()
     let teks = String(tanggal) + " " +arrayBulan[bulan] + " " + String(tahun).substring(2,4)
     return teks
+}
+
+function resetHalaman(page){
+    switch (page){
+        case 1:
+            document.getElementById("inputDara1").innerHTML = innerInputDaraA
+            document.getElementById(idBirahi1).innerHTML = " "
+            document.getElementById(idBirahi2).innerHTML = " "
+            document.getElementById(idBirahi3).innerHTML = " "
+
+        case 2:
+            document.getElementById("inputIndukan1").innerHTML = innerInputIndukan1a
+            document.getElementById("outputIndukan1").innerHTML = " "
+    }   
 }
