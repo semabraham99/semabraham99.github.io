@@ -31,7 +31,7 @@
         <div class="judul">
             <h1>Sapi Dara</h1>
         </div>
-        
+
         <div class="inputTanggal" id="inputDara1">
             <h3>Masukan Tanggal Lahir</h3>
             <input type="date" id="tanggalLahir">  
@@ -67,24 +67,15 @@
         </div>
 
         <div class="inputTanggal" id="inputIndukan1">
-            <h3>Tanggal Beranak Terakhir</h3>
-            <input type="date" id="tanggalBeranak">  
+            <h3>Apakah sapi menunjukan tanda-tanda birahi</h3>  
             <div class="inputDialog2">
-                <button onclick="hitung(2)">lupa</button>
-                <button onclick="hitung(3)">ok</button>
+                <button onclick='gantiInputTanggal("birahi")'>ya</button>
+                <button onclick='gantiInputTanggal("beranak")'>tidak</button>
             </div>
         </div>
 
-        <div class="output1">
-            <div class="contentOutput">
-                <h3>Masa Kosong</h3>
-                <p id="outputTanggalKosong"> </p>
-            </div>
-
-            <div class="contentOutput">
-                <h3>perkiraan birahi 1</h3>
-                <p id="outputTanggalEstBirahi1"> </p>
-            </div>
+        <div class="output1" id="outputIndukan1">
+            
         </div>
 
         <div class="kembali" onclick="mainPage()">

@@ -228,6 +228,13 @@ body {
     background-color: crimson;
 }
 
+#tanggalSapih{
+    background-color: seagreen;
+}
+
+#tanggalLahir{
+    background-color: silver;
+}
 .kembali{
     width: 80vw;
     height: 7vh;
@@ -244,75 +251,3 @@ body {
     background-color: crimson;
 }
 
-.tanggalProgresBar{
-    
-    width: 80vw;
-    height:10vh;
-
-    margin-top: 3vh;    
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    
-    background-color:darkcyan;
-}
-
-.alas {
-    width: 50vw;
-    height:8vh;   
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    
-    border-radius: 25px;
-    background-color:rgb(126, 126, 126);
-
-}
-
-.progress {
-    width: 28vw;
-    height:8vh;   
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    
-    border-radius: 25px;
-    background-color:rgb(68, 67, 67);
-
-}
-
-.info{
-    width: 72vw;
-    height:10vh;   
-
-    margin-top: 2vh;
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    
-    border-radius: 10px;
-    background-color: saddlebrown ; 
-}
-
-.aplikasi{
-    width: 72vw;
-    height:10vh;   
-
-    margin-top: 2vh;
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    
-    border-radius: 10px;
-    background-color:tomato ; 
-}
