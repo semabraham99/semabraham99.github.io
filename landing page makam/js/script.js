@@ -51,6 +51,18 @@ function test(){
 
 }
 
+function newTab(param){
+
+  if (param == 'maps'){
+    window.open('https://goo.gl/maps/Ur5odF5VvWxATwqs5', '_blank');
+  }
+
+  if (param == 'chat'){
+    window.open('https://api.whatsapp.com/send/?phone=6281804339653&text&type=phone_number&app_absent=0', '_blank');
+  }
+  
+}
+
 function updateAll(){
    
   const request = new Request("https://script.google.com/macros/s/AKfycbwFrmdYISbWTx-13kv0zdiG-l2pxwOKn5EIwDhDqIOpkZCT716c0lPVVojtSOxJJtGsUw/exec")
@@ -90,3 +102,5 @@ function updateReview(num,text1,text2,text3){
   namaTanggal.innerText= text3
 
 }
+
+

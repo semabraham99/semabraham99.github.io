@@ -22,13 +22,6 @@ a {
 .btn-primary {
 background-color:#0d4a98;
 }
-.process-bg {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/3182763/pexels-photo-3182763.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-	background-size: cover;
-	background-position: center;
-}
-
-
 
 h1,h2,h3,h4,h5,h6{
 font-family: 'Libre Caslon Display', serif;	
@@ -76,4 +69,16 @@ font-size:40px;
 .carousel-caption p{
 display:none;
 }
+}
+
+#SyekhIbrahim {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.932), rgba(216, 216, 216, 1), rgba(156, 156, 156, 0.8));
+	margin-bottom: 5vh;
+	z-index: 2;
+}
+
+#informasi {
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-size: cover;
+	background-position: center;
 }
