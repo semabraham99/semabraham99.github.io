@@ -63,24 +63,17 @@ function newTab(param){
   
 }
 
-function updateAll(){
-   
-  const request = new Request("https://script.google.com/macros/s/AKfycbwFrmdYISbWTx-13kv0zdiG-l2pxwOKn5EIwDhDqIOpkZCT716c0lPVVojtSOxJJtGsUw/exec")
-
-  const response = fetch(request).then((Response)=> Response.json()).then((data)=>{
-    waktu = [(data[0].waktu),(data[1].waktu),(data[2].waktu),(data[3].waktu),(data[4].waktu),(data[5].waktu),(data[6].waktu)]
-    kesan = [(data[0].kesan),(data[1].kesan),(data[2].kesan),(data[3].kesan),(data[4].kesan),(data[5].kesan),(data[6].kesan)]
-    nama = [(data[0].nama),(data[1].nama),(data[2].nama),(data[3].nama),(data[4].nama),(data[5].nama),(data[6].nama)]
-    review = [(data[0].review),(data[1].review),(data[2].review),(data[3].review),(data[4].review),(data[5].review),(data[6].review)]
-    
-    for (let i = 0; i < 6; i++) {
-      namaTanggal = parseNama(nama[i],waktu[i])
-      updateReview (i,kesan[i],review[i],namaTanggal)
-    }
-    console.log("succes")
-    
-  })
+async function fetchReview(){
+  let dataReview = await fetchData()
+  updateReview(dataReview)
 }
+
+async function fetchData(){
+  const response = await fetch ('https://script.google.com/macros/s/AKfycbwFrmdYISbWTx-13kv0zdiG-l2pxwOKn5EIwDhDqIOpkZCT716c0lPVVojtSOxJJtGsUw/exec')
+  const data = await response.json()
+
+  return data
+} 
 
 function parseNama (nama,waktu){
   const stringA = waktu
@@ -89,18 +82,53 @@ function parseNama (nama,waktu){
   return nama + " - " + waktuFinal;
 }
 
+function updateReview(dataReview){
+  //  membuat mudifikasi pada inner html 
+  const kolomReview = document.getElementById("kolomReview")
+  
+  // menambahkan secara iteratif data yang ada 
+  let panjang = dataReview.length
+  let konten = ' '
+  for ( let i = 0 ; i < panjang ; i++){
 
-function updateReview(num,text1,text2,text3){
-  console.log("kesan" + String(num+1))
-  const kesan = document.getElementById("kesan" + String(num+1))
-  kesan.innerText= text1
+    // kesan, nama, tanggal
+    let kesan = dataReview[i]['kesan']
+    let review = dataReview[i]['review']
+    let namaTanggal = parseNama(dataReview[i]['nama'],dataReview[i]['waktu'])
 
-  const review = document.getElementById("review" + String(num+1))
-  review.innerText= text2
+    let card1 = `<div class="carousel-item `
+    let card1a =`active">`
+    let card1b = '">'
 
-  const namaTanggal = document.getElementById("namaTanggal" + String(num+1))
-  namaTanggal.innerText= text3
+    let card2 = 
+    `<div class="card">
+      <div class="card-body">
+        <h5 class="card-title">`
 
+    let card3 = `</h5>
+    <p class="card-text">`
+
+    let card4 = `</p>
+    <p class="card-text"><small class="text-muted">`
+
+    let card5 = `</small></p>
+        </div>
+      </div>
+    </div>`
+    
+    if (i == 0) {
+      let card = card1 + card1a + card2 + kesan + card3 + review + card4 + namaTanggal + card5
+      konten += card
+    }
+    else {
+      let card = card1 + card1b + card2 + kesan + card3 + review + card4 + namaTanggal + card5
+      konten += card
+    }
+  } 
+  console.log(konten)
+  kolomReview.innerHTML= konten
+  
 }
+
 
 
