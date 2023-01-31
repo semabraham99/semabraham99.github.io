@@ -42,15 +42,6 @@
 })(jQuery); // End of use strict
 
 // tambahan script 
-function test(){
-  console.log("bisa")
-  const text1 = "makasi"
-  const text2 = "apapun makananny, minumnya air"
-  const text3 = "nama" + "tanggal"
-  update(1,text1,text2,text3)
-
-}
-
 function newTab(param){
 
   if (param == 'maps'){
@@ -69,17 +60,14 @@ async function fetchReview(){
 }
 
 async function fetchData(){
-  const response = await fetch ('https://script.google.com/macros/s/AKfycbwFrmdYISbWTx-13kv0zdiG-l2pxwOKn5EIwDhDqIOpkZCT716c0lPVVojtSOxJJtGsUw/exec')
+  const response = await fetch ('https://script.google.com/macros/s/AKfycbxj7N8t8zVRpdJhX4syene3sc103tzlkK21OBjrJcD4n6jxns_fJPECM25-MhmYHP2V7Q/exec')
   const data = await response.json()
 
   return data
 } 
 
 function parseNama (nama,waktu){
-  const stringA = waktu
-  let a = stringA.search("T")
-  let waktuFinal = stringA.slice(0,a)
-  return nama + " - " + waktuFinal;
+  return nama + " - " + waktu;
 }
 
 function updateReview(dataReview){
@@ -125,7 +113,6 @@ function updateReview(dataReview){
       konten += card
     }
   } 
-  console.log(konten)
   kolomReview.innerHTML= konten
   
 }

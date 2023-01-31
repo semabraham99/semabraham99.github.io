@@ -30,11 +30,15 @@ font-family: 'Libre Caslon Display', serif;
 width:70px;
 margin-bottom:30px;	
 }
+
+
 .carousel-caption h5{
 font-size:90px;	
+
 }
 .carousel-caption p{
 font-size:24px;	
+margin-left: 1vw;
 }
 .carousel-caption {
     position: absolute;
@@ -43,9 +47,14 @@ font-size:24px;
     left:15%;
     z-index: 10;
     padding-top:0;
-    padding-bottom:0;
+	padding-bottom:0;
+	padding-left: 2vh;
     text-align:left;
 	color :rgb(219, 219, 219);
+	background-color: rgba(0, 0, 0, 0.5);
+	
+	height: 22vh;
+	width: 50vw;
 }
 input{
 border-radius:0 !important;		
