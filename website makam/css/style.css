@@ -71,13 +71,17 @@ font-size:15px !important;
 .active{
 color:#0d4a98 !important;	
 }
+
+
 @media(max-width:960px){
-.carousel-caption h5{
-font-size:40px;	
-}	
-.carousel-caption p{
-display:none;
-}
+	
+	.carousel-caption h5{
+	font-size:40px;	
+	}
+
+	.carousel-caption p{
+	font-size:20px;
+	}
 }
 
 #SyekhIbrahim {
