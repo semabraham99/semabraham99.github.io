@@ -4,40 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test halaman</title>
-
+    <title>Waiter - Cak Har</title>
     <link rel="stylesheet" href="./style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
-    
-    <div id="containerPage1" >
-        <div class="container2">
-            <div class="quiz-category">
-                <h1>Motion - L1 </h1>
-            </div>
+    <div class="container" id="halaman1">
+        <div class="text1">
+            <h1>Nomor Meja</h1>
         </div>
-
-        <div class="question">
-            <h3 id="questionText">menu web</h3>  
+        <div class="text2">
+            <h1 id="nomorMeja"></h1>
         </div>
-        
-        <div class="answer" >
-            <a href="./halaman 1/index.html"><button id= "buttonB" type="button" >halaman 1</button></a>
-            <a href="./halaman 2/index.html"><button id= "buttonB" type="button" >halaman 2</button></a>
-            <a href="./halaman 3/index.html"><button id= "buttonB" type="button" >halaman 3</button></a>
-            <a href="./halaman 4/index.html"><button id= "buttonB" type="button" >halaman quiz</button></a>
-            <a href="./website makam/index.html"><button id= "buttonB" type="button" >web makam</button></a>
-            <a href="./website Pringombo/index.html"><button id= "buttonB" type="button" >web profile</button></a>
-            <a href="./aplikasi ternak/versi2/index.html"><button id= "buttonB" type="button" >aplikasi ternak</button></a>
+        <div class="tombolInput">
+            <button onclick="tombol(1)">1</button>
+            <button onclick="tombol(2)">2</button>
+            <button onclick="tombol(3)">3</button>
+            <button onclick="tombol(4)">4</button>
+            <button onclick="tombol(5)">5</button>
+            <button onclick="tombol(6)">6</button>
+            <button onclick="tombol(7)">7</button>
+            <button onclick="tombol(8)">8</button>
+            <button onclick="tombol(9)">9</button>
+            <button onclick="tombol(0)">0</button>
         </div>
-       
+        <div class="text1" id="tombolBuat" onclick="lanjutkan()">
+            <h1>Buat Pesanan</h1>
+        </div>
+        <div class="text1" id="tombolBersih" onclick="bersihkan()">
+            <h1>Bersihkan</h1>
+        </div>
     </div>
-  
+
+    <div class="container" id="halaman2">
+        <div class="tombolInputMenu">
+           <button onclick="menu(1)">A1</button>
+           <button onclick="menu(2)">A2</button>
+           <button onclick="menu(3)">A3</button>
+           <button onclick="menu(4)">A4</button>
+           <button onclick="menu(5)">N5</button>
+           <button onclick="menu(6)">S1</button>
+           <button onclick="menu(7)">S2</button>
+           <button onclick="menu(8)">S3</button>
+           <button onclick="menu(9)">S4</button>
+           <button onclick="menu(10)">T0</button>
+           <button onclick="menu(11)">T1</button>
+           <button onclick="menu(12)">T2</button>
+           <button onclick="menu(13)">T3</button>
+           <button onclick="menu(14)">T4</button>
+           <button onclick="menu(15)">AR</button>
+           <button onclick="menu(16)">J1</button>
+           <button onclick="menu(17)">J2</button>
+           <button onclick="menu(18)">J3</button>
+           <button onclick="menu(19)">J4</button>
+           <button onclick="menu(20)">AS</button>
+           <button onclick="menu(21)">21</button>
+           <button onclick="menu(22)">22</button>
+           <button onclick="menu(23)">23</button>
+           <button onclick="menu(24)">24</button>
+           <button onclick="menu(25)">25</button>
+        </div>
+        <div class="container2">
+            <div class="kolom">
+                <h2 id="labelMenu">s.ayam kecil</h2>
+                <div class="text1" id="jumlahPesanan">0</div>
+                <div class="tombolInputJumlahPesanan">
+                    <button onclick="tambah(1)">+</button>
+                    <button onclick="tambah(-1)">-</button>
+                    <button onclick="tambah(3)">+3</button>
+                    <button onclick="tambah(5)">+5</button>
+                    <button onclick="tambah(7)">+7</button>
+                    <button onclick="tambah(10)">+10</button>
+                </div>
+            </div>
+            <div class="kolom">
+                <div id="listPesanan">
+                    
+                </div>
+                <div class="text1" onclick="konfirmasi()">konfirmasi</div>
+                <div class="text1" onclick="reset()">kembali</div>
+            </div>
+
+        </div>
+    </div>
+
 </body>
+<script src="./script.js"></script>
 </html>
