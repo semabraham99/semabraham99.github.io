@@ -140,6 +140,7 @@ function deletePesanan (menuAktif) {
 
 function konfirmasi(){
     
+    popup(1,0,"pesanan diproses")
     // fetch pesanan 
     fetch("https://script.google.com/macros/s/AKfycbzjLpH5INKF2Tv0LbYjYadPvGN0Q0wILmgZ5yfcbOQA6Zy3U_s0poSol2iGJ0_FF_1vsg/exec", {
         method: 'POST',
@@ -153,10 +154,36 @@ function konfirmasi(){
         }
     }).then(response => {
         console.log("success:", response);
+        popup(1,1,"pesanan telah diterima");
     }).catch(err => {
         console.log("Error:" + err);
+        popup(1,1,"pesanan belum diterima");
     });
-    
+}
+
+function popup(status,button,teks){
+   const popupDiv = document.getElementById('popup')
+   const message = document.getElementById('pesan')
+   const buttonNotif = document.getElementById('kembaliNotif')
+
+   message.innerText = teks
+   if (status == 1){
+    popupDiv.style.display = "flex"
+   }
+   else {
+    popupDiv.style.display = "none"
+   }
+
+   if (button == 1){
+    buttonNotif.hidden=0
+   }
+   else{
+    buttonNotif.hidden=1
+   }
+}
+
+function kembali(){
+    reset()
 }
 
 function reset(){
@@ -173,6 +200,7 @@ function reset(){
 
     // kembali ke halaman utama
     gantiHalaman(halaman1)
+    popup(0," ")
     
     resetVariabel()
 }

@@ -18,6 +18,37 @@
     background-color: aqua;
 }
 
+.popup {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+
+    display: none;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.763);
+}
+
+.popup_message {
+    width: 80vw;
+    height: 40vh;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: rgb(255, 255, 255);
+}
+
 .text1{
     width: 80%;
     height: 10vh;
@@ -28,6 +59,9 @@
     flex-direction: column;
     justify-content:center;
     align-items: center;
+
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
 
     background-color: rgb(70, 19, 93); 
 }
@@ -61,6 +95,7 @@
 
 .tombolInput button{
     background-color: rgb(140, 96, 161); 
+    font-size: 1.5rem;
 }
 
 #nomorMeja{
@@ -164,3 +199,12 @@
     
 }
 
+.kembali{
+    width: 80%;
+    height: 20%;
+
+    border-radius: 20px;
+    background-color: rgb(125, 125, 125);
+
+    font-size: 2rem;
+}
