@@ -5,18 +5,17 @@ let pesanan = []
 let menuAktif = 1
 let listPesanan = []
 let listMenu = []
-
 let listMakanan = []
 let listMinuman = []
 
 let jumlah = 0 
 
 let namaMenu = [
-    "s.ayam kecil","s.ayam kecil pisah","s.ayam besar","s.ayam besar pisah", "nasi",
-    "s.sapi kecil","s.sapi kecil pisah","s.sapi besar","s.sapi besar pisah", "sisa-2",
-    "teh tawar","teh manis","es teh tawar"," es teh manis", "air hangat",
-    "jeruk tawar","jeruk manis","es jeruk tawar"," es jeruk manis", "air es",
-    "kosong-1","kosong-2","kosong-3","kosong-4", "kosong-5"
+    "Soto Ayam - N","Soto Ayam - L","Soto Ayam (K) - L","Soto Ayam (K) - N","Kampul Hangat",
+    "Soto Istimewa - N","Soto Istimewa - L","Nasi","Lontong","Kampul Dingin",    
+    "Teh Tawar","Teh Manis","Es Teh Tawar"," Es Teh Manis", "Remon Hangat",
+    "Jeruk Tawar","Jeruk Manis","Es Jeruk Tawar"," Es Jeruk Manis", "Remon Dingin",
+    "Milkshake strawbery","Milkshake Vanila","Milkshake Coklat","Soda Gembira","Air Mineral"
 ] 
 
 const labelNomorMeja = document.getElementById('nomorMeja')
