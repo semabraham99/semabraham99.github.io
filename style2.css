@@ -61,7 +61,7 @@
     align-items: center;
 
     color: rgb(255, 255, 255);
-    font-size: 1.4rem;
+    font-size: 1.2em;
 
     background-color: rgb(70, 19, 93); 
 }
@@ -89,17 +89,18 @@
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 50% 50%;
-
+    
     background-color: rgb(70, 19, 93); 
 }
 
 .tombolInput button{
     background-color: rgb(140, 96, 161); 
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 #nomorMeja{
     font-size: 10em;
+    color: rgb(214, 213, 213);
 }
 
 #halaman2 {
