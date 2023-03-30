@@ -1,96 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waiter - Cak Har</title>
-    <link rel="stylesheet" href="./style2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container" id="halaman1">
-        <div class="text1">
-            <h1>Nomor Meja</h1>
-        </div>
-        <div class="text2">
-            <h1 id="nomorMeja"></h1>
-        </div>
-        <div class="tombolInput">
-            <button onclick="tombol(1)">1</button>
-            <button onclick="tombol(2)">2</button>
-            <button onclick="tombol(3)">3</button>
-            <button onclick="tombol(4)">4</button>
-            <button onclick="tombol(5)">5</button>
-            <button onclick="tombol(6)">6</button>
-            <button onclick="tombol(7)">7</button>
-            <button onclick="tombol(8)">8</button>
-            <button onclick="tombol(9)">9</button>
-            <button onclick="tombol(0)">0</button>
-        </div>
- 
-        <button class="button1" id="tombolBuat" onclick="lanjutkan()"> Buat Pesanan</button>
-        <button class="button1" id="tombolBersih" onclick="bersihkan()"> Bersihkan</button>
-        
-    </div>
 
-    <div class="container" id="halaman2">
-        <div class="tombolInputMenu">
-           <button onclick="menu(1)">A1</button>
-           <button onclick="menu(2)">A2</button>
-           <button onclick="menu(3)">A3</button>
-           <button onclick="menu(4)">A4</button>
-           <button onclick="menu(5)">N5</button>
-           <button onclick="menu(6)">S1</button>
-           <button onclick="menu(7)">S2</button>
-           <button onclick="menu(8)">S3</button>
-           <button onclick="menu(9)">S4</button>
-           <button onclick="menu(10)">T0</button>
-           <button onclick="menu(11)">T1</button>
-           <button onclick="menu(12)">T2</button>
-           <button onclick="menu(13)">T3</button>
-           <button onclick="menu(14)">T4</button>
-           <button onclick="menu(15)">AR</button>
-           <button onclick="menu(16)">J1</button>
-           <button onclick="menu(17)">J2</button>
-           <button onclick="menu(18)">J3</button>
-           <button onclick="menu(19)">J4</button>
-           <button onclick="menu(20)">AS</button>
-           <button onclick="menu(21)">21</button>
-           <button onclick="menu(22)">22</button>
-           <button onclick="menu(23)">23</button>
-           <button onclick="menu(24)">24</button>
-           <button onclick="menu(25)">25</button>
-        </div>
-        <div class="container2">
-            <div class="kolom">
-                <h2 id="labelMenu">Soto Ayam - N</h2>
-                <div class="text1" id="jumlahPesanan">0</div>
-                <div class="tombolInputJumlahPesanan">
-                    <button onclick="tambah(1)">+</button>
-                    <button onclick="tambah(-1)">-</button>
-                    <button onclick="tambah(3)">+3</button>
-                    <button onclick="tambah(5)">+5</button>
-                    <button onclick="tambah(7)">+7</button>
-                    <button onclick="tambah(10)">+10</button>
+<head>
+    <meta charset="utf-8">
+    <title>Sem Abraham</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt="">
+                </div>
+                <div class="col-lg-7 text-center text-lg-left">
+                    <h1 class="text-white font-weight-normal mb-3">Sem Abraham Widjaja</h1>
+                    <h3 class="text-white font-weight-normal mb-3">Berpengalaman dalam :</h3>
+                    <div class="skils">
+                        
+                        <div class="skil">Google App Script</div>
+                        <div class="skil">Robotika</div> 
+                        <div class="skil">Sistem IOT</div>
+                        <div class="skil">Otomasi Industri</div>
+                        <div class="skil">Image Processing</div> 
+                        <div class="skil">Web App Dev</div>
+                       
+                    </div>
+                   
+                    <!-- <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a href="" class="btn btn-outline-light mr-5">Download CV</a>
+                        <button type="button" class="btn-play" data-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
+                    </div> -->
                 </div>
             </div>
-            <div class="kolom">
-                <div id="listPesanan">
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e600;">Tentang</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Tentang Saya</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4">Tentang Saya</h3>
+                    <p>Lulusan baru S1 Elektronika dan Instrumentasi, Departemen Ilmu Komputer, FMIPA UGM. Berpengalamn dalam berbagai bidang seperti: Otomasi Google Workspace menggunakan App Script, Pendidikan Fisika dan Robotika, Otomasi proses industri, IOT, Pengolahan Citra Digital, Pembuatan sistem Aplikasi berbasis web       </p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2"><h6>Nama: <span class="text-secondary">Kate Winslet</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Tanggal Lahir: <span class="text-secondary">19 Juni 1999</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Pendidikan: <span class="text-secondary">S1 Elektronika Instrumentasi, FMIPA, Universitas Gadjha Mada</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Pengalaman Kerja: <span class="text-secondary">3 Tahun</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Kontak WA: <span class="text-secondary">+6289 6099 3468 2</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">semabraham2018@mail.ugm.ac.id</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Alamat: <span class="text-secondary">Pandega Asih IV / D7 , Sleman </span></h6></div>
+                        
+                    </div>
+                    <a href="http://wa.me/6289609934682" class="btn btn-outline-primary mr-4">Kontak WA</a>
                     
                 </div>
-                <div class="text1" onclick="konfirmasi()">konfirmasi</div>
-                <div class="text1" onclick="reset()">kembali</div>
             </div>
+        </div>
+    </div>
+    <!-- About End -->
 
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e600;">pendidikan & pengalaman</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Pendidikan dan Pengalaman Kerja</h1>
+            </div>
+            <div class="row align-items-start">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Pendidikan</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">S1 Elektronika Instrumentasi</h5>
+                            <p class="mb-2"><strong>FMIPA, Universitas Gadjah Mada</strong> | <small>2018 - 2023</small></p>
+                            <p>program studi dalam departemen Ilmu Komputer dan elektronika yang merupakan turunan dari departemen Fisika FMIPA UGM</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">D3 Elektronika Instrumentasi </h5>
+                            <p class="mb-2"><strong>Sekolah Vokasi, Universitas Gadjah Mada</strong> | <small>2017 - 2018</small></p>
+                            <p>Pendidikan vokasional Ilmu Elektronikan dan Instrumentasi.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">SMA Negeri 3 Semarang</h5>
+                            <p class="mb-2"><strong>Semarang , Jawa Tengah</strong> | <small>2014 - 2017</small></p>
+                            <p>Kelas Studi Matematika dan ilmu pengetahuan Alam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Pengalaman</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Aplikasi Kitchen Display</h5>
+                            <p class="mb-2"><strong>Project Pribadi</strong> | <small>2023</small></p>
+                            <p>Sistem input order berbasis aplikasi web untuk sisi waiters dan sistem display pesanan dan kasir berbasis mobile android. Sistem dilengkapi program untuk untuk mencetak list makanan, list minuman , checker, dan nota pembelian menggunakan printer thermal Bluetooth. Sistem dibuat menggunakan backend google app script</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Coordinator & Assitant Digital Electronics</h5>
+                            <p class="mb-2"><strong>International Undergraduate Program</strong> | <small>2022</small></p>
+                            <p>Koordinator asisten untuk mata Kuliah Praktikum elektronika Digital untuk kelas IUP Elins UGM.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Asisten Praktikum Pemrograman Dasar</h5>
+                            <p class="mb-2"><strong>Lab Pemrograman FMIPA UGM</strong> | <small>2022</small></p>
+                            <p>Asisten dosen untuk mata kuliah Pemrograman Dasar menggunakan bahasa pemrograman C++ untuk kelas praktikum S1 Elins Reguler  </p>
+                        </div> 
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Software Engineer & System Developer</h5>
+                            <p class="mb-2"><strong>Magang - PT.STECHOQ ROBOTIKA INDONESIA</strong> | <small>2022</small></p>
+                            <p>Perancangan dan implementasi software dan hardware sistem inspeksi visual otomatis berbasis kamera menggunakan pengolahan citra digital dan kecerdasan buatan untuk mengidentifikasi dan mencatat cacat produksi pada produk injection moulding. Algoritma diimplementasikan menggunakan Bahasa pemrograman python dan menggunakan websocket untuk melakukan komunikasi dengan frontend - flutter. Komunikasi juga dilakukan ke hardware PLC menggunakan protokol modbus.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Tentor Fisika Dasar I</h5>
+                            <p class="mb-2"><strong>Kewirausahaan BEM MIPA UGM</strong> | <small>2021</small></p>
+                            <p>Mengampu kelas tutorial untuk matakuliah Fisika Dasar pada mahasiswa S1 MIPA UGM</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Sistem Aplikasi Persewaan Sepeda Listrik</h5>
+                            <p class="mb-2"><strong>Project Profesional</strong> | <small>2020</small></p>
+                            <p>Perancangan dan perakitan hardware timer sewa berbasis IOT sewa pada sepeda listrik yang dilengkapi lcd display, rfid reader, buzzer, Sensor getar, wifi transmiter. Dibuat juga sistem di sisi operator berupa aplikasi android untuk mencetak tagihan atau biaya sewa dan untuk melihat rekap catatan transaksi harian. Sistem juga dilengkapi backend service menggunakan google app script untuk mencatat setiap transaksi sewa, rekap transaksi harian, dan laporan keuangan bulanan otomatis.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Hardware Programmer</h5>
+                            <p class="mb-2"><strong>Gamaforce - Tim Riset Robot terbang UGM</strong> | <small>2018 - 2019</small></p>
+                            <p>Mengerjakan pengembangan program secara khusus untuk sistem akuisisi data sensor dan navigasi Autopilot Flight Controller EDRONES. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="popup" id="popup">
-        <div class="popup_message">
-            <h1 id="pesan">Berhasil</h1>
-            <button class="kembali" onclick="kembali()" id="kembaliNotif">Kembali</button>
+    <!-- Qualification End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="service">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e600;">Service</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Rangkuman Kemampuan</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Otomasi Aplikasi Google</h4>
+                    </div>
+                    <p>otomasi berbagai aplikasi google seperti Spreadsheet, Email, Kalender dengan Pemrograman menggunakan Google App Acript</p>
+                   
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Otomasi Industri dan IOT</h4>
+                    </div>
+                    <p>Desain dan implementasi Hardware dan software sistem Otomasi proses industri berbasis PLC dan internet of things</p>
+                    
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Robotika</h4>
+                    </div>
+                    <p>Pemrograman Robot dan pengolahan citra digital berbasis C, C++, Python</p>
+                   
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Apps Development</h4>
+                    </div>
+                    <p>Pengembangan aplikasi web sederhana berbasis native HTML,CSS, dan Javascript.</p>
+                    
+                </div>
+            </div>
         </div>
     </div>
+    <!-- Services End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="whatsapp" onclick="window.open(`http://wa.me/6289609934682`,'Kontak wa');" >
+                <a class="btn btn-light btn-social mr-2" href="http://wa.me/6289609934682"><i class="fab fa-whatsapp"></i></a>
+                <h3>whatsapp</h3>
+            </div>       
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
-<script src="./script.js"></script>
+
 </html>
