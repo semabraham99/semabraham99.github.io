@@ -24,7 +24,7 @@ function test () {
         return
     }
         
-    if (beratBadans == "") {
+    if (beratBadan == "") {
         console.log("berat badan belum diisi")
         return
     }
