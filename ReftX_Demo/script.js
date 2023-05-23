@@ -15,11 +15,26 @@ function test () {
     let kolomTanggalData = document.getElementById('tanggalData')
     let tanggalData = kolomTanggalData.value
 
-    if (nama == "") console.log("nama belum diisi")
-    if (tanggalLahir == "") console.log("tanggal lahir belum diisi")
-    if (beratBadan == "") console.log("berat badan belum diisi")
-    if (tanggalData == "") console.log("tanggal data belum diisi")
+    if (nama == ""){
+        console.log("nama belum diisi")
+        return
+    } 
+    if (tanggalLahir == "") {
+        console.log("tanggal lahir belum diisi")
+        return
+    }
+        
+    if (beratBadans == "") {
+        console.log("berat badan belum diisi")
+        return
+    }
+        
+    if (tanggalData == "") {
+        console.log("tanggal data belum diisi")
+        return
+    }
     
+    konfirmasi(nama,tanggalLahir,beratBadan,tanggalData)
     console.log(nama)
     console.log(tanggalLahir)
     console.log(tanggalData)
