@@ -136,6 +136,7 @@ async function fetchLogin(nama,telepon){
 function displayLoading(display){
     const loadingPage = document.getElementById('loadingPage')
     if (display == true) {
+        loadingPage.style.zIndex = 200
         loadingPage.style.display = 'flex'
         loadingPage.style.animation = 'loading1 2s'
         
@@ -147,8 +148,10 @@ function displayLoading(display){
 }
 
 function displaySent(display=false){
+    
     const sentPage = document.getElementById('sentPage')
     if (display == true) {
+        sentPage.style.zIndex = 200
         sentPage.style.display = 'flex'
         sentPage.style.animation = 'popup1 2s'
     }
@@ -161,6 +164,7 @@ function displaySent(display=false){
 function displayNotSent(display=false){
     const sentPage = document.getElementById('notSentPage')
     if (display == true) {
+        sentPage.style.zIndex = 200
         sentPage.style.display = 'flex'
         sentPage.style.animation = 'popup1 2s'
     }
@@ -171,13 +175,14 @@ function displayNotSent(display=false){
 }
 
 function displayDataSalah(display=false){
-    const sentPage = document.getElementById('notificationPage')
+    const notifPage = document.getElementById('notificationPage')
     if (display == true) {
-        sentPage.style.display = 'flex'
-        sentPage.style.animation = 'popup1 1.6s'
+        notifPage.style.zIndex = 200
+        notifPage.style.display = 'flex'
+        notifPage.style.animation = 'popup1 1.6s'
     }
     else {
-        sentPage.style.zIndex = -100
-        sentPage.style.display = 'none'
+        notifPage.style.zIndex = -100
+        notifPage.style.display = 'none'
     }
 }
