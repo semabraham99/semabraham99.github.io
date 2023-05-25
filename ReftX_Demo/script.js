@@ -17,20 +17,32 @@ function test () {
 
     if (nama == ""){
         console.log("nama belum diisi")
+        displayDataSalah(true)
+        setTimeout(displayDataSalah,2000)
+        
         return
     } 
     if (tanggalLahir == "") {
         console.log("tanggal lahir belum diisi")
+        displayDataSalah()
+        setTimeout(displayDataSalah,2000)
+        
         return
     }
         
     if (beratBadan == "") {
         console.log("berat badan belum diisi")
+        displayDataSalah()
+        setTimeout(displayDataSalah,2000)
+        
         return
     }
         
     if (tanggalData == "") {
         console.log("tanggal data belum diisi")
+        displayDataSalah()
+        setTimeout(displayDataSalah,2000)
+        
         return
     }
     
@@ -41,9 +53,24 @@ function test () {
     console.log(beratBadan) 
 }
 
+function clearInput(){
+    let kolomNama = document.getElementById('nama')
+    kolomNama.value = ""
+    
+    let kolomTanggalLahir = document.getElementById('ttl')
+    kolomTanggalLahir.value =""
+
+    let kolomBeratBadan = document.getElementById('beratBadan')
+    kolomBeratBadan.value = ""
+
+    let kolomTanggalData = document.getElementById('tanggalData')
+    kolomTanggalData.value = ""
+}
+
 function konfirmasi(_nama, _tanggalLahir, _berat, _dataTime){
     
     console.log("pesanan diproses")
+    displayLoading(true)
     // fetch pesanan 
     fetch("https://script.google.com/macros/s/AKfycby7F3oZLgiGpVDvDq_dmQkeMBqEQwxxm98Ly-WQ2FWSoDRMmtn-zJ_TuIa0Vji6w5zieg/exec", {
         method: 'POST',
@@ -58,8 +85,15 @@ function konfirmasi(_nama, _tanggalLahir, _berat, _dataTime){
         }
     }).then(response => {
         console.log("success:", response);
+        
+        displayLoading(false)
+        displaySent(true)
+        setTimeout(displaySent,2000)
+        clearInput()
     }).catch(err => {
         console.log("Error:" + err);
+        displayNotSent(true)
+        setTimeout(displayNotSent,2000)
         // popup(1,1,"pesanan belum diterima");
     });
 }
@@ -73,9 +107,11 @@ function buatRequest(nama,telepon){
         
     ).then(response => {
         console.log(response);
+        displaySent(true);
         
     }).catch(err => {
         console.log("Error:" + err);
+        displayNotSent(true);
         
     });
 }
@@ -95,4 +131,53 @@ async function fetchLogin(nama,telepon){
     
   
     return hasil
+}
+
+function displayLoading(display){
+    const loadingPage = document.getElementById('loadingPage')
+    if (display == true) {
+        loadingPage.style.display = 'flex'
+        loadingPage.style.animation = 'loading1 2s'
+        
+    }
+    else {
+        loadingPage.style.zIndex = -100
+        loadingPage.style.display = 'none'
+    }
+}
+
+function displaySent(display=false){
+    const sentPage = document.getElementById('sentPage')
+    if (display == true) {
+        sentPage.style.display = 'flex'
+        sentPage.style.animation = 'popup1 2s'
+    }
+    else {
+        sentPage.style.zIndex = -100
+        sentPage.style.display = 'none'
+    }
+}
+
+function displayNotSent(display=false){
+    const sentPage = document.getElementById('notSentPage')
+    if (display == true) {
+        sentPage.style.display = 'flex'
+        sentPage.style.animation = 'popup1 2s'
+    }
+    else {
+        sentPage.style.zIndex = -100
+        sentPage.style.display = 'none'
+    }
+}
+
+function displayDataSalah(display=false){
+    const sentPage = document.getElementById('notificationPage')
+    if (display == true) {
+        sentPage.style.display = 'flex'
+        sentPage.style.animation = 'popup1 1.6s'
+    }
+    else {
+        sentPage.style.zIndex = -100
+        sentPage.style.display = 'none'
+    }
 }
