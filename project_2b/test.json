@@ -1,0 +1,13 @@
+{
+    "soal": {
+        "ayat":"Yakobus 4 : 3",
+        "teks":["Atau kamu berdoa juga, tetapi kamu tidak menerima apa-apa, karena kamu "," ,sebab yang kamu minta itu hendak kamu ","untuk","hawa nafsumu"],
+        "blank":["_____________ ","__________ ","____________ "],
+        "opsi":["salah berdoa","habiskan","memuaskan"],
+        "kunci":[0,1,2] 
+    },
+            
+    "videoURL":"https://www.youtube.com/watch?v=xtoXrIIgPIQ"
+
+}
+
